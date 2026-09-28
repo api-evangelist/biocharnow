@@ -1,23 +1,60 @@
 aid: biocharnow
+
 name: Biocharnow
-description: 'Biocharnow is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://biocharnow.com/wp-content/uploads/2019/12/BiocharNow_rounded_logo_gray_background.png
+
+description: 'Biochar Now is a pioneer in the biochar industry, offering engineered biochar products for agriculture, reclamation, oil & gas, and odor control. The company provides large‑scale manufacturing, scientific testing, and sustainability solutions, with a strong focus on quality, scalability, and environmental impact.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biocharnow/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Biochar
+- Sustainability
+- Agriculture
+- Manufacturing
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/biocharnow-hosts.yml
+- type: DomainSecurity
+  url: security/biocharnow-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/biocharnow
+  url: https://biocharnow.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The main website returns HTTP 406 for documentation pages, providing no machine‑readable spec.
+  evidence:
+    - url: https://biocharnow.com/docs
+      status: 406
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

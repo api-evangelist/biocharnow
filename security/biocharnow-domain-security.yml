@@ -1,0 +1,15 @@
+generated: '2026-09-28'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: biocharnow.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 11 12:09:47 2026 GMT
+  hsts: false
+domains:
+- domain: biocharnow.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
